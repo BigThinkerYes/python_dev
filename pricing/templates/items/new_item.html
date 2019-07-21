@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <header><h1>Price Alerts</h1></header>
+    <section class="create-item-form">
+        <form method="post" action="/">
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="https://..." />
+            </div>
+
+            <div class="form-group">
+                <label for="tag_name">Tag name</label>
+                <input type="text" class="form-control" id="tag_name" name="tag_name" placeholder='span' aria-describedby="tagNameHelp" />
+                <small id="tagNameHelp" class="form-text text-muted">
+                    Let's set that Price Alert!
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="query">Query</label>
+                <input type="text" class="form-control" id="query" name="query" placeholder='{"id": "..."}' aria-describedby="queryHelp" />
+                <small id="priceLimitHelp" class="form-text text-muted">
+                    Let's start!
+                </small>
+            </div>
+            <button type="submit" class="btn btn-warning">Create Me!</button>
+
+        </form>
+    </section>
+{% endblock %}
